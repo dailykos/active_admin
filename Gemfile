@@ -6,6 +6,7 @@ ACTIVE_ADMIN_PATH = File.dirname(__FILE__) unless defined?(ACTIVE_ADMIN_PATH)
 
 require File.expand_path('spec/support/detect_rails_version', ACTIVE_ADMIN_PATH)
 
+debugger
 rails_version = detect_rails_version
 gem 'rails', rails_version
 gem 'bourbon'
@@ -17,6 +18,7 @@ when /^3\.(1|2)/
   # These are the gems you have to have for Rails 3.1 to be happy
   gem 'sass-rails'
   gem 'uglifier'
+when /^4\.0/
 else
   raise "Rails #{rails_version} is not supported yet"
 end
